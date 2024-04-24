@@ -24,8 +24,8 @@ public class Account {
     @PositiveOrZero(message = "balance should be positive")
     @Column(columnDefinition = "INT NOT NULL CHECK(balance>=0)")
     private Double balance;
-    @AssertFalse(message = "account should be disabled by default")
-    @Column(columnDefinition = "BOOLEAN NOT NULL DEFAULT FALSE")
+//    @AssertFalse(message = "account should be disabled by default")
+    @Column(columnDefinition = "BOOLEAN NOT NULL")
     private Boolean isActive;
 
     @ManyToOne

@@ -62,7 +62,7 @@ public class AccountService {
         if(account == null){
             throw new ApiException("account not found");
         }
-        if(account.getCustomer().getId() != customer_id){
+        if(!account.getCustomer().equals(customer)){
             throw new ApiException("error"); // account does not belong to customer
         }
         account.setIsActive(true);
